@@ -1,0 +1,6 @@
+framework module Qson {
+  umbrella header "Pods-Qson_Tests-Qson-umbrella.h"
+
+  export *
+  module * { export * }
+}

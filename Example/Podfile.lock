@@ -1,0 +1,14 @@
+PODS:
+  - Qson (0.1.0)
+
+DEPENDENCIES:
+  - Qson (from `../`)
+
+EXTERNAL SOURCES:
+  Qson:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Qson: 034ff4367781c190f1ae2ee482e67986c994d084
+
+COCOAPODS: 0.37.2

@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07960F501B869D8A00410EBC /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 07960F4F1B869D8A00410EBC /* Test.m */; };
 		3F50B94FDC26AEA5C8BEA207 /* Pods_Qson_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F755428BF12D658DBB0CC7D /* Pods_Qson_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07960F4D1B869D8900410EBC /* Qson_Tests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Qson_Tests-Bridging-Header.h"; sourceTree = "<group>"; };
+		07960F4E1B869D8A00410EBC /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
+		07960F4F1B869D8A00410EBC /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
 		27DE93D4475A2444ED5E8C47 /* Qson.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Qson.podspec; path = ../Qson.podspec; sourceTree = "<group>"; };
 		5C24F4B88AB9DB8E41454503 /* Pods-Qson_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qson_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Qson_Tests/Pods-Qson_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		607FACE51AFB9204008FA782 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Tests.xctest; path = Qson_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACE51AFB9204008FA782 /* Qson_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Qson_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6F755428BF12D658DBB0CC7D /* Pods_Qson_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Qson_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,7 +53,7 @@
 		607FACD11AFB9204008FA782 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				607FACE51AFB9204008FA782 /* Tests.xctest */,
+				607FACE51AFB9204008FA782 /* Qson_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -59,6 +63,9 @@
 			children = (
 				607FACEB1AFB9204008FA782 /* Tests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
+				07960F4E1B869D8A00410EBC /* Test.h */,
+				07960F4F1B869D8A00410EBC /* Test.m */,
+				07960F4D1B869D8900410EBC /* Qson_Tests-Bridging-Header.h */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -118,7 +125,7 @@
 			);
 			name = Qson_Tests;
 			productName = Tests;
-			productReference = 607FACE51AFB9204008FA782 /* Tests.xctest */;
+			productReference = 607FACE51AFB9204008FA782 /* Qson_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -218,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				07960F501B869D8A00410EBC /* Test.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +272,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/alanquintiliano/Development/iOS/Qson/Pod/Classes/Qson-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -301,6 +310,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/alanquintiliano/Development/iOS/Qson/Pod/Classes/Qson-Bridging-Header.h";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -309,6 +319,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 95A2AC596589681CF51FA194 /* Pods-Qson_Tests.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -320,6 +331,8 @@
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tests/Qson_Tests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Qson_Example.app/Qson_Example";
 			};
 			name = Debug;
@@ -328,6 +341,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5C24F4B88AB9DB8E41454503 /* Pods-Qson_Tests.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -335,6 +349,7 @@
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tests/Qson_Tests-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Qson_Example.app/Qson_Example";
 			};
 			name = Release;
