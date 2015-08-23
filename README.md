@@ -22,7 +22,7 @@ pod "Qson"
 
 ## Author
 
-Alan Quintiliano, aquintiliano@daitangroup.com
+Alan Quintiliano, alan_doni@hotmail.com
 
 ## License
 
